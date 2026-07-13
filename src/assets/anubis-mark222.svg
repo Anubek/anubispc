@@ -1,0 +1,30 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="anubisBlue" x1="130" y1="84" x2="382" y2="428" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34F5FF"/>
+      <stop offset=".48" stop-color="#03D8F6"/>
+      <stop offset="1" stop-color="#0099D6"/>
+    </linearGradient>
+    <filter id="glow" x="58" y="48" width="396" height="420" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" fill="#020407"/>
+  <g filter="url(#glow)">
+    <path d="M150 124L202 296L154 266L126 328L184 348L132 378L201 426L185 352L215 373L228 438L256 460L284 438L297 373L327 352L311 426L380 378L328 348L386 328L358 266L310 296L362 124L304 318L286 332L303 215L332 90L370 252L344 320L382 273L408 337L344 362L392 389L291 456L309 386L285 402L256 462L227 402L203 386L221 456L120 389L168 362L104 337L130 273L168 320L142 252L180 90L209 215L226 332L208 318L150 124Z" fill="url(#anubisBlue)"/>
+    <path d="M221 182L256 168L291 182L280 224L256 248L232 224L221 182Z" fill="#08DFF7"/>
+    <path d="M206 270L242 300L200 286L176 250L206 270Z" fill="#020407"/>
+    <path d="M306 270L270 300L312 286L336 250L306 270Z" fill="#020407"/>
+    <path d="M200 284L244 300L220 312L182 292L200 284Z" fill="#25F2FF"/>
+    <path d="M312 284L268 300L292 312L330 292L312 284Z" fill="#25F2FF"/>
+    <path d="M226 322L241 352L233 394L211 365L226 322Z" fill="#020407"/>
+    <path d="M286 322L271 352L279 394L301 365L286 322Z" fill="#020407"/>
+    <path d="M238 376L256 388L274 376L256 414L238 376Z" fill="#020407"/>
+    <path d="M228 314L246 328H266L284 314L271 350H241L228 314Z" fill="#020407"/>
+    <path d="M232 350H280L256 370L232 350Z" fill="#15DDF4"/>
+  </g>
+</svg>

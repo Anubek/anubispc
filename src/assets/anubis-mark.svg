@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Anubis PC">
+  <defs>
+    <linearGradient id="anubis-cyan" x1="96" y1="54" x2="416" y2="458" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#29f4ff"/>
+      <stop offset="0.45" stop-color="#10d9f2"/>
+      <stop offset="1" stop-color="#0894c7"/>
+    </linearGradient>
+    <filter id="anubis-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.05 0 0 0 0 0.86 0 0 0 0 1 0 0 0 0.72 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g filter="url(#anubis-glow)" fill="url(#anubis-cyan)">
+    <path d="M177 60 95 244l45 66 24-103 23 71 22-34-31-184Z"/>
+    <path d="M335 60 417 244l-45 66-24-103-23 71-22-34 31-184Z"/>
+    <path d="M256 118 194 145l20 58 42 33 42-33 20-58-62-27Z"/>
+
+    <path d="M161 262 70 341l74 22 45-63-28-38Z"/>
+    <path d="M351 262 442 341l-74 22-45-63 28-38Z"/>
+    <path d="M146 374 68 390l59 38 71-30-52-24Z"/>
+    <path d="M366 374 444 390l-59 38-71-30 52-24Z"/>
+
+    <path d="M209 300 139 409l45 24 40-112-15-21Z"/>
+    <path d="M303 300 373 409l-45 24-40-112 15-21Z"/>
+    <path d="M236 330 256 318l20 12-20 34-20-34Z"/>
+    <path d="M223 374h66l-33 82-33-82Z"/>
+  </g>
+
+  <g fill="#041014">
+    <path d="M166 261c28 0 54 10 70 28-34-4-61 5-89 32 4-24 9-42 19-60Z"/>
+    <path d="M346 261c-28 0-54 10-70 28 34-4 61 5 89 32-4-24-9-42-19-60Z"/>
+    <path d="M196 290c19 4 34 12 45 25-23-4-44 0-65 13 4-15 10-27 20-38Z"/>
+    <path d="M316 290c-19 4-34 12-45 25 23-4 44 0 65 13-4-15-10-27-20-38Z"/>
+    <path d="M231 342 256 329l25 13-25 42-25-42Z"/>
+  </g>
+
+  <g fill="none" stroke="#7df7ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" opacity="0.78">
+    <path d="M177 60 95 244l45 66"/>
+    <path d="M335 60 417 244l-45 66"/>
+    <path d="M161 262 70 341l74 22"/>
+    <path d="M351 262 442 341l-74 22"/>
+    <path d="M209 300 139 409"/>
+    <path d="M303 300 373 409"/>
+  </g>
+</svg>
