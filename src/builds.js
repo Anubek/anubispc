@@ -1,9 +1,9 @@
-import raImage from './assets/build-ra.png';
-import horusImage from './assets/build-horus.png';
-import horusRxImage from './assets/build-horus-rx.png';
-import setImage from './assets/build-set.png';
-import setRxImage from './assets/build-set-rx.png';
-import ultimateImage from './assets/build-ultimate.png';
+import raImage from './assets/build-ra.webp';
+import horusImage from './assets/build-horus.webp';
+import horusRxImage from './assets/build-horus-rx.webp';
+import setImage from './assets/build-set.webp';
+import setRxImage from './assets/build-set-rx.webp';
+import ultimateImage from './assets/build-ultimate.webp';
 
 export const defaultVariantOrder = ['base'];
 

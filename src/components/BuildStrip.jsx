@@ -40,7 +40,7 @@ function Spec({ icon: Icon, label, value }) {
   );
 }
 
-export function BuildStrip({ build, isOpen, onToggle }) {
+export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
   const variantKeys = build.variantOrder ?? defaultVariantOrder;
   const defaultVariantKey = variantKeys[0] ?? 'base';
   const buildClassName = `strip strip--${build.id} ${isOpen ? 'strip--open' : ''}`;
@@ -54,7 +54,15 @@ export function BuildStrip({ build, isOpen, onToggle }) {
     <article className={buildClassName} style={{ '--accent': build.accent }}>
       <button className="strip__summary" type="button" onClick={onToggle} aria-expanded={isOpen}>
         <span className="strip__image">
-          <img src={build.image} alt={build.name} />
+          <img
+            src={build.image}
+            alt={build.name}
+            width="1200"
+            height="900"
+            loading={isPriority ? 'eager' : 'lazy'}
+            fetchPriority={isPriority ? 'high' : 'auto'}
+            decoding="async"
+          />
           <span className="strip__tier">{build.tier}</span>
         </span>
         <span className="strip__content">

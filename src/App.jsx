@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Mail } from "lucide-react";
-import logoImage from "./assets/anubis-mark.png";
+import logoImage from "./assets/anubis-mark.webp";
 import { builds } from "./builds.js";
 import { BuildStrip } from "./components/BuildStrip.jsx";
 
@@ -85,7 +85,7 @@ export function App() {
     <main>
       <nav className="topbar">
         <a className="brand" href="#top" aria-label="Start">
-          <img src={logoImage} alt="" />
+          <img src={logoImage} alt="" width="240" height="253" decoding="async" />
           <span>Anubis PC</span>
         </a>
         <div className="nav-links" aria-label="Sekcje strony">
@@ -119,10 +119,11 @@ export function App() {
       </header>
 
       <section className="builds" aria-label="Lista komputerów">
-        {builds.map((build) => (
+        {builds.map((build, index) => (
           <BuildStrip
             key={build.id}
             build={build}
+            isPriority={index === 0}
             isOpen={openId === build.id}
             onToggle={() => setOpenId(openId === build.id ? "" : build.id)}
           />
