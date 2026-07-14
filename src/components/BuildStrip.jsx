@@ -54,15 +54,18 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
     <article className={buildClassName} style={{ '--accent': build.accent }}>
       <button className="strip__summary" type="button" onClick={onToggle} aria-expanded={isOpen}>
         <span className="strip__image">
-          <img
-            src={build.image}
-            alt={build.name}
-            width="1200"
-            height="900"
-            loading={isPriority ? 'eager' : 'lazy'}
-            fetchPriority={isPriority ? 'high' : 'auto'}
-            decoding="async"
-          />
+          <picture>
+            <source media="(max-width: 680px)" srcSet={build.imageSmall} />
+            <img
+              src={build.image}
+              alt={build.name}
+              width="1200"
+              height="900"
+              loading={isPriority ? 'eager' : 'lazy'}
+              fetchPriority={isPriority ? 'high' : 'auto'}
+              decoding="async"
+            />
+          </picture>
           <span className="strip__tier">{build.tier}</span>
         </span>
         <span className="strip__content">

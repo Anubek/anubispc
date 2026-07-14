@@ -3,6 +3,7 @@ import { Mail } from "lucide-react";
 import logoImage from "./assets/anubis-mark.webp";
 import { builds } from "./builds.js";
 import { BuildStrip } from "./components/BuildStrip.jsx";
+import { CookieConsent } from "./components/CookieConsent.jsx";
 
 const checks = [
   "aktualizacja BIOS-u",
@@ -80,12 +81,13 @@ const contactMethods = [
 
 export function App() {
   const [openId, setOpenId] = useState(builds[0].id);
+  const [privacySettingsOpen, setPrivacySettingsOpen] = useState(false);
 
   return (
     <main>
       <nav className="topbar">
         <a className="brand" href="#top" aria-label="Start">
-          <img src={logoImage} alt="" width="240" height="253" decoding="async" />
+          <img src={logoImage} alt="" width="240" height="253" decoding="async" fetchPriority="high" />
           <span>Anubis PC</span>
         </a>
         <div className="nav-links" aria-label="Sekcje strony">
@@ -231,6 +233,21 @@ export function App() {
           Zapytaj o zestaw <Mail size={18} />
         </a>
       </section>
+
+      <footer className="site-footer">
+        <span>© 2026 Anubis PC</span>
+        <div>
+          <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+          <button type="button" onClick={() => setPrivacySettingsOpen(true)}>
+            Ustawienia prywatności
+          </button>
+        </div>
+      </footer>
+
+      <CookieConsent
+        forceOpen={privacySettingsOpen}
+        onClose={() => setPrivacySettingsOpen(false)}
+      />
     </main>
   );
 }

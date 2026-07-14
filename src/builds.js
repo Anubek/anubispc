@@ -1,9 +1,15 @@
 import raImage from './assets/build-ra.webp';
+import raImageSmall from './assets/build-ra-mobile.webp';
 import horusImage from './assets/build-horus.webp';
+import horusImageSmall from './assets/build-horus-mobile.webp';
 import horusRxImage from './assets/build-horus-rx.webp';
+import horusRxImageSmall from './assets/build-horus-rx-mobile.webp';
 import setImage from './assets/build-set.webp';
+import setImageSmall from './assets/build-set-mobile.webp';
 import setRxImage from './assets/build-set-rx.webp';
+import setRxImageSmall from './assets/build-set-rx-mobile.webp';
 import ultimateImage from './assets/build-ultimate.webp';
+import ultimateImageSmall from './assets/build-ultimate-mobile.webp';
 
 export const defaultVariantOrder = ['base'];
 
@@ -19,6 +25,7 @@ export const builds = [
     name: 'RA',
     line: 'Budget',
     image: raImage,
+    imageSmall: raImageSmall,
     tier: 'Budget',
     accent: '#facc15',
     short: 'Rozsądny komputer do 1080p bez dopłacania do zbędnych dodatków.',
@@ -61,6 +68,7 @@ export const builds = [
     name: 'HORUS',
     line: 'Gaming',
     image: horusImage,
+    imageSmall: horusImageSmall,
     tier: 'Gaming',
     accent: '#fb7185',
     short: 'Mocny zestaw do 1080p z dopracowanym wyglądem i możliwością personalizacji.',
@@ -103,6 +111,7 @@ export const builds = [
     name: 'HORUS RX',
     line: 'Gaming RX',
     image: horusRxImage,
+    imageSmall: horusRxImageSmall,
     tier: 'Gaming RX',
     accent: '#ef4444',
     short: 'Gamingowy HORUS z kartą Radeon i mocnym zestawem do 1080p.',
@@ -145,6 +154,7 @@ export const builds = [
     name: 'SET',
     line: 'Performance',
     image: setImage,
+    imageSmall: setImageSmall,
     tier: 'Performance',
     accent: '#f97316',
     short: 'Wydajność klasy 1440p. Do wyboru wersja Pure Performance lub Gaming.',
@@ -207,6 +217,7 @@ export const builds = [
     name: 'SET RX',
     line: 'Performance RX',
     image: setRxImage,
+    imageSmall: setRxImageSmall,
     tier: 'Performance RX',
     accent: '#ef4444',
     short: 'Wariant SET z kartą Radeon. Mocna rasteryzacja i więcej pamięci VRAM.',
@@ -269,6 +280,7 @@ export const builds = [
     name: 'ANUBIS',
     line: 'Ultimate',
     image: ultimateImage,
+    imageSmall: ultimateImageSmall,
     tier: 'Ultimate',
     accent: '#c084fc',
     short: 'Flagowy zestaw Anubis PC. Maksymalna wydajność, dwa sposoby wykonania.',

@@ -7,6 +7,134 @@
   text-rendering: optimizeLegibility;
 }
 
+.site-footer {
+  align-items: center;
+  color: rgba(226, 232, 240, 0.55);
+  display: flex;
+  font-size: 0.78rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1296px;
+  padding: 24px 18px 34px;
+}
+
+.site-footer div {
+  display: flex;
+  gap: 18px;
+}
+
+.site-footer a,
+.site-footer button {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer button:hover {
+  color: #e2e8f0;
+}
+
+.cookie-consent {
+  align-items: center;
+  backdrop-filter: blur(18px);
+  background: rgba(8, 10, 15, 0.96);
+  border: 1px solid rgba(94, 234, 212, 0.28);
+  border-radius: 16px;
+  bottom: 18px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.58);
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  left: 50%;
+  max-width: 920px;
+  padding: 20px;
+  position: fixed;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  z-index: 1000;
+}
+
+.cookie-consent strong {
+  color: #f8fafc;
+  display: block;
+  font-size: 0.92rem;
+  margin-bottom: 7px;
+}
+
+.cookie-consent p {
+  color: #aeb8c7;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 0 0 7px;
+  max-width: 580px;
+}
+
+.cookie-consent a {
+  color: #5eead4;
+  font-size: 0.76rem;
+}
+
+.cookie-consent__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 10px;
+}
+
+.cookie-consent__actions button {
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 800;
+  min-height: 42px;
+  padding: 0 16px;
+}
+
+.cookie-consent__secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #d8e0eb;
+}
+
+.cookie-consent__primary {
+  background: #f8fafc;
+  border: 1px solid #f8fafc;
+  color: #07080b;
+}
+
+@media (max-width: 680px) {
+  .site-footer,
+  .site-footer div,
+  .cookie-consent,
+  .cookie-consent__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .site-footer {
+    gap: 14px;
+  }
+
+  .site-footer div {
+    gap: 10px;
+  }
+
+  .cookie-consent {
+    bottom: 10px;
+    gap: 16px;
+    padding: 18px;
+    width: calc(100% - 20px);
+  }
+
+  .cookie-consent__actions button {
+    width: 100%;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -208,6 +336,8 @@ h1 span {
 }
 
 .strip {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 620px;
   --image-hover-scale: 1.07;
   --image-position: center 50%;
   --image-scale: 1.02;
@@ -284,6 +414,12 @@ h1 span {
   inset: 0;
   pointer-events: none;
   position: absolute;
+}
+
+.strip__image picture {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 .strip__image img {
