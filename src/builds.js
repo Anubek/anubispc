@@ -81,7 +81,7 @@ export const builds = [
           gpu: 'RTX 5060 Ti',
           cpu: 'Ryzen 5 7500F',
           motherboard: 'B650',
-          ram: '32 GB DDR5 RGB',
+          ram: '32 GB DDR5',
           storage: '1 TB NVMe',
           case: 'Deepcool CC560 ARGB V2',
           psu: '750 W, 80+ Gold, ATX 3.1',
