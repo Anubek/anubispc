@@ -32,7 +32,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 5120,
+        price: 5250,
         summary: 'Najniższa cena, przy której zestaw nadal ma sens.',
         specs: {
           gpu: 'RTX 5060',
@@ -75,7 +75,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 6550,
+        price: 6700,
         summary: 'Wydajność nadal jest najważniejsza, ale komputer ma również dobrze wyglądać.',
         specs: {
           gpu: 'RTX 5060 Ti',
@@ -118,7 +118,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 6550,
+        price: 6700,
         summary: 'Wariant z kartą AMD dla osób, które wolą Radeona w tej półce cenowej.',
         specs: {
           gpu: 'RX 9060 XT',
