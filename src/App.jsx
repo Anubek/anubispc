@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Mail } from "lucide-react";
 import logoImage from "./assets/anubis-mark.webp";
 import { builds } from "./builds.js";
 import { BuildStrip } from "./components/BuildStrip.jsx";
-import { CookieConsent } from "./components/CookieConsent.jsx";
 
 const checks = [
-  "aktualizacja BIOS-u",
-  "konfiguracja EXPO/XMP",
+  "aktualizacja BIOS-u i konfiguracja profilu EXPO/XMP",
   "test pamięci RAM",
   "test obciążeniowy procesora i karty",
   "kontrola temperatur",
@@ -26,7 +24,7 @@ const services = [
   },
   {
     title: "Instalacja i konfiguracja systemu",
-    text: "Windows, sterowniki, aktualizacje, BIOS i ustawienie pamięci RAM.",
+    text: "Windows, sterowniki, aktualizacje oraz konfiguracja BIOS-u i profilu EXPO/XMP.",
   },
   {
     title: "Diagnoza problemów",
@@ -56,7 +54,7 @@ const orderSteps = [
 const includedItems = [
   "Dobór kompatybilnych podzespołów",
   "Montaż i uporządkowanie okablowania",
-  "Konfigurację BIOS-u i pamięci RAM",
+  "Konfigurację BIOS-u i profilu EXPO/XMP",
   "Instalację sterowników",
   "Testy stabilności i temperatur",
   "Instalację systemu Windows z rynku wtórnego wraz z certyfikatem legalności",
@@ -78,6 +76,84 @@ const contactMethods = [
   },
   { label: "Telefon", value: "732 997 597", href: "tel:+48732997597" },
 ];
+
+const consentKey = "anubispc-analytics-consent";
+
+function isLiveSite() {
+  return window.location.hostname === "anubispc.pl" || window.location.hostname === "www.anubispc.pl";
+}
+
+function getSavedChoice() {
+  try {
+    return window.localStorage.getItem(consentKey);
+  } catch {
+    return null;
+  }
+}
+
+function saveChoice(value) {
+  try {
+    window.localStorage.setItem(consentKey, value);
+  } catch {
+    // Brak localStorage nie może blokować korzystania ze strony.
+  }
+}
+
+async function loadUsageStats() {
+  try {
+    return await import("./siteMetrics.js");
+  } catch {
+    // Blokada statystyk przez przeglądarkę lub rozszerzenie nie może zatrzymać strony.
+    return null;
+  }
+}
+
+function SettingsPanel({ forceOpen, onClose }) {
+  const [choice, setChoice] = useState(() => getSavedChoice());
+
+  useEffect(() => {
+    if (choice === "granted" && isLiveSite()) {
+      void loadUsageStats().then((stats) => stats?.enableUsageStats());
+    }
+  }, []);
+
+  const choose = (value) => {
+    saveChoice(value);
+    setChoice(value);
+
+    if (value === "granted" && isLiveSite()) {
+      void loadUsageStats().then((stats) => stats?.enableUsageStats());
+    } else if (choice === "granted" && isLiveSite()) {
+      void loadUsageStats().then((stats) => stats?.disableUsageStats());
+    }
+
+    onClose();
+  };
+
+  if (!forceOpen && choice !== null) return null;
+
+  return (
+    <aside className="privacy-panel" role="dialog" aria-label="Ustawienia prywatności">
+      <div>
+        <strong>Pomóż nam rozwijać Anubis PC</strong>
+        <p>
+          Za Twoją zgodą korzystamy z Google Analytics, aby sprawdzać, jak użytkownicy korzystają
+          ze strony i dzięki temu ją ulepszać. Dane służą wyłącznie do zbiorczych statystyk i nie
+          wpływają na działanie serwisu.
+        </p>
+        <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+      </div>
+      <div className="privacy-panel__actions">
+        <button type="button" className="privacy-panel__secondary" onClick={() => choose("denied")}>
+          ❌ Odrzuć
+        </button>
+        <button type="button" className="privacy-panel__primary" onClick={() => choose("granted")}>
+          ✅ Akceptuję
+        </button>
+      </div>
+    </aside>
+  );
+}
 
 export function App() {
   const [openId, setOpenId] = useState(builds[0].id);
@@ -106,8 +182,8 @@ export function App() {
         <div className="hero__copy">
           <p className="eyebrow">anubis pc</p>
           <h1>
-            Komputery składane z głową
-            <span>Bez przypadkowych części i pustego marketingu</span>
+            Komputery składane z głową
+            <span>Bez przypadkowych części i pustego marketingu</span>
           </h1>
           <p>
             Wybierz gotową konfigurację albo napisz, czego potrzebujesz.
@@ -150,8 +226,11 @@ export function App() {
           <h2>Jak zamówić komputer?</h2>
         </div>
         <p className="delivery-note">
-          Termin realizacji zależy od dostępności części i jest potwierdzany
-          przed zamówieniem. Zwykle wynosi 7-14 dni.
+          <span>
+            Termin realizacji zależy od dostępności części i jest potwierdzany
+            przed zamówieniem.
+          </span>
+          <strong>Zwykle 7–14 dni.</strong>
         </p>
         <div className="step-grid">
           {orderSteps.map((step, index) => (
@@ -244,7 +323,7 @@ export function App() {
         </div>
       </footer>
 
-      <CookieConsent
+      <SettingsPanel
         forceOpen={privacySettingsOpen}
         onClose={() => setPrivacySettingsOpen(false)}
       />

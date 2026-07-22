@@ -120,7 +120,8 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
             <section>
               <h3>Szacowana wydajność</h3>
               <p className="fps-note">
-                Wyniki zależą od gry, ustawień, aktualizacji i użytej technologii skalowania obrazu.
+                Wartości orientacyjne. Gry AAA: wysokie ustawienia bez ray tracingu. Gry e-sportowe:
+                ustawienia nastawione na płynność. Bez skalowania i generowania klatek, chyba że zaznaczono inaczej.
               </p>
               <div className="fps-list">
                 {build.fps.map((item) => (

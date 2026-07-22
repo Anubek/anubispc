@@ -60,7 +60,7 @@ export const builds = [
     notes: [
       'pierwszy komputer do grania',
       'gry e-sportowe i popularne tytuły AAA',
-      'dla osoby, która chce wydać możliwie mało, ale nie kupić bubla',
+      'dla osoby, która chce wydać możliwie mało, ale nadal dostać solidny zestaw',
     ],
   },
   {
@@ -209,7 +209,7 @@ export const builds = [
     notes: [
       'osoby grające głównie w 1440p',
       'klienci, którzy nie chcą płacić za wygląd',
-      'osoby, które wolą mocniejszy podzespół zamiast droższego RGB',
+      'osoby, które stawiają na mocniejsze podzespoły zamiast droższego RGB',
     ],
   },
   {
@@ -240,7 +240,7 @@ export const builds = [
           'mocna rasteryzacja',
           'więcej VRAM',
           'dobry wybór do grania bez nacisku na ray tracing',
-          'NVIDIA zostaje lepsza dla DLSS, CUDA i części zastosowań profesjonalnych',
+          'NVIDIA nadal ma przewagę przy DLSS, CUDA i w części programów profesjonalnych',
         ],
       },
       gaming: {

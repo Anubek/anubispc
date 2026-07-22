@@ -1,5 +1,4 @@
 export const GA_MEASUREMENT_ID = "G-EY6JDR6JVX";
-export const ANALYTICS_CONSENT_KEY = "anubispc-analytics-consent";
 
 function isProductionDomain() {
   return window.location.hostname === "anubispc.pl" || window.location.hostname === "www.anubispc.pl";
@@ -23,23 +22,7 @@ function ensureGtag() {
   }
 }
 
-export function getAnalyticsConsent() {
-  try {
-    return window.localStorage.getItem(ANALYTICS_CONSENT_KEY);
-  } catch {
-    return null;
-  }
-}
-
-export function saveAnalyticsConsent(value) {
-  try {
-    window.localStorage.setItem(ANALYTICS_CONSENT_KEY, value);
-  } catch {
-    // Brak localStorage nie blokuje korzystania ze strony.
-  }
-}
-
-export function enableAnalytics() {
+export function enableUsageStats() {
   ensureGtag();
   window.gtag("consent", "update", {
     analytics_storage: "granted",
@@ -76,7 +59,7 @@ function removeAnalyticsCookies() {
   });
 }
 
-export function disableAnalytics() {
+export function disableUsageStats() {
   ensureGtag();
   window.gtag("consent", "update", {
     analytics_storage: "denied",
@@ -85,11 +68,4 @@ export function disableAnalytics() {
     ad_personalization: "denied",
   });
   removeAnalyticsCookies();
-}
-
-export function initializeAnalyticsFromConsent() {
-  ensureGtag();
-  if (getAnalyticsConsent() === "granted") {
-    enableAnalytics();
-  }
 }
