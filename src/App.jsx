@@ -26,10 +26,6 @@ const services = [
     title: "Instalacja i konfiguracja systemu",
     text: "Windows, sterowniki, aktualizacje oraz konfiguracja BIOS-u i profilu EXPO/XMP.",
   },
-  {
-    title: "Diagnoza problemów",
-    text: "Sprawdzenie temperatur, stabilności i przyczyny spadków wydajności.",
-  },
 ];
 
 const orderSteps = [
