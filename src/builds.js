@@ -287,7 +287,7 @@ export const builds = [
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
-        price: 13600,
+        price: 14000,
         summary: 'RTX 5080 i Ryzen 7 9800X3D bez kosztownych dodatków, które nie wpływają na liczbę klatek.',
         specs: {
           gpu: 'RTX 5080',
