@@ -6,10 +6,16 @@ import horusRxImage from './assets/build-horus-rx.webp';
 import horusRxImageSmall from './assets/build-horus-rx-mobile.webp';
 import setImage from './assets/build-set.webp';
 import setImageSmall from './assets/build-set-mobile.webp';
+import setGamingImage from './assets/build-set-gaming.webp';
+import setGamingImageSmall from './assets/build-set-gaming-mobile.webp';
 import setRxImage from './assets/build-set-rx.webp';
 import setRxImageSmall from './assets/build-set-rx-mobile.webp';
-import ultimateImage from './assets/build-ultimate.webp';
-import ultimateImageSmall from './assets/build-ultimate-mobile.webp';
+import setRxGamingImage from './assets/build-set-rx-gaming.webp';
+import setRxGamingImageSmall from './assets/build-set-rx-gaming-mobile.webp';
+import anubisPureImage from './assets/build-anubis-pure.webp';
+import anubisPureImageSmall from './assets/build-anubis-pure-mobile.webp';
+import anubisGamingImage from './assets/build-anubis-gaming.webp';
+import anubisGamingImageSmall from './assets/build-anubis-gaming-mobile.webp';
 
 export const defaultVariantOrder = ['base'];
 
@@ -39,7 +45,7 @@ export const builds = [
           cpu: 'Ryzen 5 8400F',
           motherboard: 'B650',
           ram: '16 GB DDR5',
-          storage: '512 GB NVMe',
+          storage: '1 TB NVMe',
           case: 'Deepcool CC560 V2',
           psu: '750 W, 80+ Bronze, ATX 3.1',
           cooling: 'powietrzne RGB',
@@ -75,7 +81,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 6700,
+        price: 6650,
         summary: 'Wydajność nadal jest najważniejsza, ale komputer ma również dobrze wyglądać.',
         specs: {
           gpu: 'RTX 5060 Ti',
@@ -118,7 +124,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 6700,
+        price: 6650,
         summary: 'Wariant z kartą AMD dla osób, które wolą Radeona w tej półce cenowej.',
         specs: {
           gpu: 'RX 9060 XT',
@@ -161,12 +167,12 @@ export const builds = [
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
-        price: 9100,
+        price: 9350,
         summary: 'Prosta forma, mocne podzespoły i możliwie najlepszy stosunek ceny do FPS.',
         specs: {
           gpu: 'RTX 5070',
           cpu: 'Ryzen 7 7800X3D',
-          motherboard: 'B650E',
+          motherboard: 'B850',
           ram: '32 GB DDR5',
           storage: '1 TB NVMe',
           case: 'Phanteks XT Pro Ultra ARGB',
@@ -181,15 +187,17 @@ export const builds = [
         ],
       },
       gaming: {
-        price: 9950,
+        price: 10300,
+        image: setGamingImage,
+        imageSmall: setGamingImageSmall,
         summary: 'Ta sama klasa wydajności, ale z lepszą obudową, podświetleniem i bardziej dopracowanym wykończeniem.',
         specs: {
           gpu: 'RTX 5070',
           cpu: 'Ryzen 7 7800X3D',
-          motherboard: 'B650E',
+          motherboard: 'B850',
           ram: '32 GB DDR5 RGB',
           storage: '1 TB NVMe',
-          case: 'Deepcool CH780',
+          case: 'Deepcool CH690 Digital czarna',
           psu: '850 W, 80+ Gold, ATX 3.1',
           cooling: 'AIO 360 RGB',
         },
@@ -224,12 +232,12 @@ export const builds = [
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
-        price: 9300,
+        price: 9500,
         summary: 'Wariant z kartą Radeon. Więcej surowej wydajności i pamięci VRAM kosztem części funkcji NVIDIA.',
         specs: {
           gpu: 'RX 9070 XT',
           cpu: 'Ryzen 7 7800X3D',
-          motherboard: 'B650E',
+          motherboard: 'B850',
           ram: '32 GB DDR5',
           storage: '1 TB NVMe',
           case: 'Phanteks XT Pro Ultra ARGB',
@@ -244,15 +252,17 @@ export const builds = [
         ],
       },
       gaming: {
-        price: 9950,
+        price: 10100,
+        image: setRxGamingImage,
+        imageSmall: setRxGamingImageSmall,
         summary: 'Wersja z Radeonem, lepszą obudową, RGB i bardziej dopracowanym wyglądem.',
         specs: {
           gpu: 'RX 9070 XT',
           cpu: 'Ryzen 7 7800X3D',
-          motherboard: 'B650E',
+          motherboard: 'B850',
           ram: '32 GB DDR5 RGB',
           storage: '1 TB NVMe',
-          case: 'Deepcool CH780',
+          case: 'Deepcool CH690 Digital czarna',
           psu: '850 W, 80+ Gold, ATX 3.1',
           cooling: 'AIO 360 RGB',
         },
@@ -279,8 +289,8 @@ export const builds = [
     id: 'anubis',
     name: 'ANUBIS',
     line: 'Ultimate',
-    image: ultimateImage,
-    imageSmall: ultimateImageSmall,
+    image: anubisPureImage,
+    imageSmall: anubisPureImageSmall,
     tier: 'Ultimate',
     accent: '#c084fc',
     short: 'Flagowy zestaw Anubis PC. Maksymalna wydajność, dwa sposoby wykonania.',
@@ -292,7 +302,7 @@ export const builds = [
         specs: {
           gpu: 'RTX 5080',
           cpu: 'Ryzen 7 9800X3D',
-          motherboard: 'B650E',
+          motherboard: 'B850',
           ram: '32 GB DDR5',
           storage: '2 TB NVMe',
           case: 'Phanteks XT Pro Ultra ARGB',
@@ -307,7 +317,9 @@ export const builds = [
         ],
       },
       gaming: {
-        price: 17000,
+        price: 16500,
+        image: anubisGamingImage,
+        imageSmall: anubisGamingImageSmall,
         summary: 'Flagowa wydajność połączona z obudową typu showcase, podświetleniem i częściami wybranymi również pod wygląd.',
         specs: {
           gpu: 'RTX 5080',
@@ -315,7 +327,7 @@ export const builds = [
           motherboard: 'X870E',
           ram: '32 GB DDR5 RGB',
           storage: '2 TB NVMe',
-          case: 'Lian Li O11 Dynamic EVO RGB',
+          case: 'HYTE Y70',
           psu: '1000 W, 80+ Gold, ATX 3.1',
           cooling: 'AIO 360 z ekranem',
         },

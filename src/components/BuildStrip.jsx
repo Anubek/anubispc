@@ -48,6 +48,8 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
   const safeVariantKey = build.variants[variantKey] ? variantKey : defaultVariantKey;
   const selectedVariant = build.variants[safeVariantKey] ?? build.variants[defaultVariantKey];
   const specs = selectedVariant.specs;
+  const selectedImage = selectedVariant.image ?? build.image;
+  const selectedImageSmall = selectedVariant.imageSmall ?? build.imageSmall;
   const showVariantSwitch = variantKeys.length > 1;
 
   return (
@@ -55,10 +57,10 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
       <button className="strip__summary" type="button" onClick={onToggle} aria-expanded={isOpen}>
         <span className="strip__image">
           <picture>
-            <source media="(max-width: 680px)" srcSet={build.imageSmall} />
+            <source media="(max-width: 680px)" srcSet={selectedImageSmall} />
             <img
-              src={build.image}
-              alt={build.name}
+              src={selectedImage}
+              alt={`${build.name} — ${variantLabels[safeVariantKey] ?? safeVariantKey}`}
               width="1200"
               height="900"
               loading={isPriority ? 'eager' : 'lazy'}
