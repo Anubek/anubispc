@@ -188,6 +188,7 @@ export function App() {
             <span>Dobór części bez przepłacania</span>
             <span>Testy przed wysyłką</span>
             <span>Możliwość personalizacji</span>
+            <span>Wsparcie po zakupie</span>
           </p>
         </div>
       </header>
@@ -311,7 +312,11 @@ export function App() {
 
       <footer className="site-footer">
         <span>© 2026 Anubis PC</span>
-        <div>
+        <div className="site-footer__trust">
+          <strong>Składanie komputerów · Elbląg</strong>
+          <span>Wysyłka na całą Polskę</span>
+        </div>
+        <div className="site-footer__links">
           <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
           <button type="button" onClick={() => setPrivacySettingsOpen(true)}>
             Ustawienia prywatności

@@ -39,7 +39,7 @@ export const builds = [
     variants: {
       base: {
         price: 5250,
-        summary: 'Najniższa cena, przy której zestaw nadal ma sens.',
+        summary: 'Rozsądnie dobrane podzespoły z naciskiem na opłacalność i możliwość późniejszej rozbudowy.',
         specs: {
           gpu: 'RTX 5060',
           cpu: 'Ryzen 5 8400F',
@@ -66,7 +66,7 @@ export const builds = [
     notes: [
       'pierwszy komputer do grania',
       'gry e-sportowe i popularne tytuły AAA',
-      'dla osoby, która chce wydać możliwie mało, ale nadal dostać solidny zestaw',
+      'dla osób szukających opłacalnego wejścia w platformę AM5',
     ],
   },
   {
@@ -77,12 +77,12 @@ export const builds = [
     imageSmall: horusImageSmall,
     tier: 'Gaming',
     accent: '#fb7185',
-    short: 'Mocny zestaw do 1080p z dopracowanym wyglądem i możliwością personalizacji.',
+    short: 'Mocny zestaw do 1080p z 32 GB RAM i większym zapasem wydajności.',
     variantOrder: ['base'],
     variants: {
       base: {
         price: 6650,
-        summary: 'Wydajność nadal jest najważniejsza, ale komputer ma również dobrze wyglądać.',
+        summary: 'Większa wydajność i lepiej dobrane podzespoły dla osób, które oczekują czegoś więcej niż podstawowa konfiguracja.',
         specs: {
           gpu: 'RTX 5060 Ti',
           cpu: 'Ryzen 5 7500F',
@@ -96,8 +96,8 @@ export const builds = [
         highlights: [
           'mocniejsza karta graficzna niż w RA',
           '32 GB pamięci RAM',
-          'estetyczna obudowa i podświetlenie',
-          'dobry wybór do szybkich monitorów 1080p',
+          'lepsze komponenty i większy zapas wydajności na kolejne lata',
+          'dobry wybór do monitorów 1080p o wysokim odświeżaniu',
         ],
       },
     },
@@ -108,7 +108,7 @@ export const builds = [
     ],
     notes: [
       'gracze korzystający z monitorów 144-240 Hz',
-      'osoby, którym zależy również na wyglądzie',
+      'gracze oczekujący wyższej wydajności w nowych grach',
       'klienci planujący grać w 1080p na wysokich ustawieniach',
     ],
   },
@@ -125,7 +125,7 @@ export const builds = [
     variants: {
       base: {
         price: 6650,
-        summary: 'Wariant z kartą AMD dla osób, które wolą Radeona w tej półce cenowej.',
+        summary: 'Większa wydajność i lepiej dobrane podzespoły w wariancie z kartą Radeon.',
         specs: {
           gpu: 'RX 9060 XT',
           cpu: 'Ryzen 5 7500F',
@@ -139,8 +139,8 @@ export const builds = [
         highlights: [
           'karta graficzna Radeon',
           '32 GB pamięci RAM',
-          'estetyczna obudowa i podświetlenie',
-          'dobry wybór do grania w 1080p',
+          'lepsze komponenty i większy zapas wydajności na kolejne lata',
+          'dobry wybór do monitorów 1080p o wysokim odświeżaniu',
         ],
       },
     },
@@ -157,7 +157,7 @@ export const builds = [
   },
   {
     id: 'set',
-    name: 'SET',
+    name: 'SETH',
     line: 'Performance',
     image: setImage,
     imageSmall: setImageSmall,
@@ -185,12 +185,17 @@ export const builds = [
           'markowe części bez kosztownych ozdobników',
           'łatwa wymiana podzespołów, gdy ceny na rynku się zmieniają',
         ],
+        audience: [
+          'osoby grające głównie w 1440p',
+          'klienci, którzy chcą przeznaczyć budżet przede wszystkim na wydajność',
+          'osoby wybierające procesor X3D i mocną kartę bez dopłat do wyposażenia premium',
+        ],
       },
       gaming: {
         price: 10300,
         image: setGamingImage,
         imageSmall: setGamingImageSmall,
-        summary: 'Ta sama klasa wydajności, ale z lepszą obudową, podświetleniem i bardziej dopracowanym wykończeniem.',
+        summary: 'Wysoka wydajność w 1440p uzupełniona o dopracowaną obudowę, podświetlenie i wyposażenie klasy premium.',
         specs: {
           gpu: 'RTX 5070',
           cpu: 'Ryzen 7 7800X3D',
@@ -202,10 +207,15 @@ export const builds = [
           cooling: 'AIO 360 RGB',
         },
         highlights: [
-          'bardziej efektowna obudowa',
+          'obudowa Deepcool CH690 Digital',
           'podświetlane podzespoły',
-          'lepsza prezentacja zestawu na biurku',
-          'wydajność pozostaje na poziomie linii SET',
+          'wyposażenie i wykończenie klasy premium',
+          'wydajność pozostaje na poziomie linii SETH',
+        ],
+        audience: [
+          'osoby, które oprócz wysokiej wydajności oczekują również dopracowanego wyglądu komputera',
+          'gracze 1440p, którzy chcą połączyć wydajność z estetyką klasy premium',
+          'klienci wybierający efektowną obudowę i podświetlane podzespoły',
         ],
       },
     },
@@ -214,21 +224,16 @@ export const builds = [
       { game: 'Nowe gry AAA, 1440p', value: 'około 70-90 FPS' },
       { game: 'Gry z ray tracingiem', value: 'wynik zależny od DLSS i Frame Generation' },
     ],
-    notes: [
-      'osoby grające głównie w 1440p',
-      'klienci, którzy nie chcą płacić za wygląd',
-      'osoby, które stawiają na mocniejsze podzespoły zamiast droższego RGB',
-    ],
   },
   {
     id: 'set-rx',
-    name: 'SET RX',
+    name: 'SETH RX',
     line: 'Performance RX',
     image: setRxImage,
     imageSmall: setRxImageSmall,
     tier: 'Performance RX',
     accent: '#ef4444',
-    short: 'Wariant SET z kartą Radeon. Mocna rasteryzacja i więcej pamięci VRAM.',
+    short: 'Wariant SETH z kartą Radeon. Mocna rasteryzacja i więcej pamięci VRAM.',
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
@@ -250,12 +255,17 @@ export const builds = [
           'dobry wybór do grania bez nacisku na ray tracing',
           'NVIDIA nadal ma przewagę przy DLSS, CUDA i w części programów profesjonalnych',
         ],
+        audience: [
+          'osoby wybierające kartę AMD i grające głównie w 1440p',
+          'klienci, którzy chcą przeznaczyć budżet przede wszystkim na wydajność',
+          'gracze oczekujący mocnej rasteryzacji i większej ilości pamięci VRAM',
+        ],
       },
       gaming: {
         price: 10100,
         image: setRxGamingImage,
         imageSmall: setRxGamingImageSmall,
-        summary: 'Wersja z Radeonem, lepszą obudową, RGB i bardziej dopracowanym wyglądem.',
+        summary: 'Mocna rasteryzacja i większa ilość pamięci VRAM połączone z dopracowaną obudową i estetyką klasy premium.',
         specs: {
           gpu: 'RX 9070 XT',
           cpu: 'Ryzen 7 7800X3D',
@@ -268,9 +278,14 @@ export const builds = [
         },
         highlights: [
           'mocna rasteryzacja',
-          'gamingowy wygląd',
+          'obudowa Deepcool CH690 Digital',
           'podświetlane podzespoły',
-          'dobry wybór do 1440p bez nacisku na ray tracing',
+          'wyposażenie i wykończenie klasy premium',
+        ],
+        audience: [
+          'osoby, które oprócz wysokiej wydajności oczekują również dopracowanego wyglądu komputera',
+          'gracze 1440p wybierający kartę AMD i wyposażenie klasy premium',
+          'klienci, którzy chcą połączyć mocną rasteryzację z efektowną obudową i podświetleniem',
         ],
       },
     },
@@ -278,11 +293,6 @@ export const builds = [
       { game: 'Gry e-sportowe', value: 'około 270-370 FPS' },
       { game: 'Nowe gry AAA, 1440p', value: 'około 85-105 FPS' },
       { game: 'Ray tracing i skalowanie', value: 'NVIDIA ma przewagę w DLSS i RT' },
-    ],
-    notes: [
-      'osoby wybierające kartę AMD',
-      'granie w 1440p bez nacisku na ray tracing',
-      'klienci, którzy chcą mocnej rasteryzacji i większej ilości VRAM',
     ],
   },
   {
@@ -315,6 +325,11 @@ export const builds = [
           'duża, przewiewna obudowa',
           'brak dopłat do ekranów, drogich wentylatorów i ozdobnych wersji części',
         ],
+        audience: [
+          'gracze oczekujący najwyższej wydajności w 1440p i 4K',
+          'osoby, które chcą RTX 5080 bez dopłat do elementów wizualnych',
+          'klienci stawiający na wydajność, chłodzenie i możliwość dalszej rozbudowy',
+        ],
       },
       gaming: {
         price: 16500,
@@ -338,17 +353,17 @@ export const builds = [
           'spójne podświetlenie',
           'dopracowany wygląd całego wnętrza',
         ],
+        audience: [
+          'osoby, które oczekują najwyższej wydajności i wyjątkowego wyglądu',
+          'gracze szukający najbardziej dopracowanego komputera w ofercie Anubis PC',
+          'klienci, którzy chcą flagowego zestawu bez kompromisów w wydajności i estetyce',
+        ],
       },
     },
     fps: [
       { game: 'Gry e-sportowe', value: 'około 350-500 FPS' },
       { game: 'Nowe gry AAA, 4K', value: 'około 60-80 FPS' },
       { game: 'Gry z ray tracingiem', value: 'wynik zależny od DLSS i Frame Generation' },
-    ],
-    notes: [
-      'gracz 1440p z monitorem o wysokim odświeżaniu',
-      'granie w 4K',
-      'osoba, która chce RTX 5080 bez budowania komputera pokazowego',
     ],
   },
 ];

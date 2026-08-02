@@ -48,6 +48,7 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
   const safeVariantKey = build.variants[variantKey] ? variantKey : defaultVariantKey;
   const selectedVariant = build.variants[safeVariantKey] ?? build.variants[defaultVariantKey];
   const specs = selectedVariant.specs;
+  const audience = selectedVariant.audience ?? build.notes;
   const selectedImage = selectedVariant.image ?? build.image;
   const selectedImageSmall = selectedVariant.imageSmall ?? build.imageSmall;
   const showVariantSwitch = variantKeys.length > 1;
@@ -83,7 +84,7 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
           </span>
         </span>
         <span className="strip__price">
-          <small>{showVariantSwitch ? 'od' : 'cena'}</small>
+          <small>cena</small>
           <strong>{priceFormatter.format(selectedVariant.price)}</strong>
         </span>
         <ChevronDown className="strip__chevron" size={22} />
@@ -111,7 +112,7 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
 
           <div className="details__grid">
             <section>
-              <h3>Najważniejsze podzespoły</h3>
+              <h3>Najważniejsze informacje</h3>
               <div className="spec-grid">
                 {specFields.map(([label, key]) => (
                   <Spec key={key} icon={specIcons[label]} label={label} value={specs[key]} />
@@ -144,7 +145,7 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
               </ul>
               <h3 className="notes__second-title">Dla kogo</h3>
               <ul className="notes">
-                {build.notes.map((note) => (
+                {audience.map((note) => (
                   <li key={note}>{note}</li>
                 ))}
               </ul>
