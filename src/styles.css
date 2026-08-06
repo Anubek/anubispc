@@ -381,7 +381,8 @@ h1 span {
   position: relative;
 }
 
-.strip--ra {
+.strip--ra,
+.strip--ra-rx {
   --image-position: center 47%;
   --image-scale: 1.08;
   --image-hover-scale: 1.12;

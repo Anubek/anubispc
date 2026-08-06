@@ -1,5 +1,7 @@
 import raImage from './assets/build-ra.webp';
 import raImageSmall from './assets/build-ra-mobile.webp';
+import raRxImage from './assets/build-ra-rx.webp';
+import raRxImageSmall from './assets/build-ra-rx-mobile.webp';
 import horusImage from './assets/build-horus.webp';
 import horusImageSmall from './assets/build-horus-mobile.webp';
 import horusRxImage from './assets/build-horus-rx.webp';
@@ -38,7 +40,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 5250,
+        price: 5300,
         summary: 'Rozsądnie dobrane podzespoły z naciskiem na opłacalność i możliwość późniejszej rozbudowy.',
         specs: {
           gpu: 'RTX 5060',
@@ -66,6 +68,49 @@ export const builds = [
     notes: [
       'pierwszy komputer do grania',
       'gry e-sportowe i popularne tytuły AAA',
+      'dla osób szukających opłacalnego wejścia w platformę AM5',
+    ],
+  },
+  {
+    id: 'ra-rx',
+    name: 'RA RX',
+    line: 'Budget RX',
+    image: raRxImage,
+    imageSmall: raRxImageSmall,
+    tier: 'Budget RX',
+    accent: '#f59e0b',
+    short: 'Opłacalny zestaw do 1080p z mocniejszą kartą Radeon.',
+    variantOrder: ['base'],
+    variants: {
+      base: {
+        price: 5300,
+        summary: 'Alternatywa dla podstawowego RA z naciskiem na wyższą wydajność w klasycznej rasteryzacji.',
+        specs: {
+          gpu: 'RX 9060 XT',
+          cpu: 'Ryzen 5 8400F',
+          motherboard: 'B650',
+          ram: '16 GB DDR5',
+          storage: '1 TB NVMe',
+          case: 'Deepcool CC560 V2',
+          psu: '750 W, 80+ Bronze, ATX 3.1',
+          cooling: 'powietrzne RGB',
+        },
+        highlights: [
+          'bardzo dobra wydajność w 1080p',
+          'mocniejsza rasteryzacja niż w podstawowym RA',
+          'markowy zasilacz i przewiewna obudowa',
+          'możliwość późniejszej rozbudowy',
+        ],
+      },
+    },
+    fps: [
+      { game: 'Gry e-sportowe', value: 'około 170-230 FPS' },
+      { game: 'Popularne gry 1080p', value: 'około 110-150 FPS' },
+      { game: 'Nowe gry AAA, 1080p', value: 'około 70-90 FPS' },
+    ],
+    notes: [
+      'gracze szukający możliwie wysokiej wydajności w 1080p',
+      'osoby wybierające kartę Radeon zamiast funkcji typowych dla NVIDIA',
       'dla osób szukających opłacalnego wejścia w platformę AM5',
     ],
   },
