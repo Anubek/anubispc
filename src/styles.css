@@ -484,6 +484,24 @@ h1 span {
   z-index: 3;
 }
 
+.strip__recommended {
+  backdrop-filter: blur(14px);
+  background: rgba(21, 128, 61, 0.88);
+  border: 1px solid rgba(134, 239, 172, 0.62);
+  border-radius: 999px;
+  box-shadow: 0 0 22px rgba(34, 197, 94, 0.28);
+  color: #f0fdf4;
+  font-size: 0.7rem;
+  font-weight: 950;
+  left: 22px;
+  letter-spacing: 0.08em;
+  padding: 7px 11px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 66px;
+  z-index: 3;
+}
+
 .strip__content {
   align-self: end;
   display: grid;
@@ -1147,6 +1165,11 @@ h1 span {
     right: 22px;
   }
 
+  .strip:nth-child(even) .strip__recommended {
+    left: auto;
+    right: 22px;
+  }
+
   .details__grid {
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr) minmax(0, 0.9fr);
   }
@@ -1248,6 +1271,13 @@ h1 span {
     left: 14px;
     padding: 6px 10px;
     top: 14px;
+  }
+
+  .strip__recommended {
+    font-size: 0.6rem;
+    left: 14px;
+    padding: 5px 8px;
+    top: 48px;
   }
 
   .strip__price {

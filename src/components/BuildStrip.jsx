@@ -14,6 +14,7 @@ import { defaultVariantOrder, specFields, variantLabels } from '../builds.js';
 
 const specIcons = {
   GPU: Zap,
+  VRAM: MemoryStick,
   CPU: Cpu,
   Płyta: CircuitBoard,
   RAM: MemoryStick,
@@ -70,6 +71,7 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
             />
           </picture>
           <span className="strip__tier">{build.tier}</span>
+          {build.recommended ? <span className="strip__recommended">Obecnie polecany</span> : null}
         </span>
         <span className="strip__content">
           <span className="strip__main">
@@ -79,6 +81,7 @@ export function BuildStrip({ build, isOpen, isPriority = false, onToggle }) {
           </span>
           <span className="strip__quick">
             <b>{specs.gpu}</b>
+            <b>{specs.vram} VRAM</b>
             <b>{specs.cpu}</b>
             <b>{specs.ram}</b>
           </span>

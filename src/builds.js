@@ -40,10 +40,11 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 5300,
+        price: 5450,
         summary: 'Rozsądnie dobrane podzespoły z naciskiem na opłacalność i możliwość późniejszej rozbudowy.',
         specs: {
           gpu: 'RTX 5060',
+          vram: '8 GB',
           cpu: 'Ryzen 5 8400F',
           motherboard: 'B650',
           ram: '16 GB DDR5',
@@ -78,15 +79,17 @@ export const builds = [
     image: raRxImage,
     imageSmall: raRxImageSmall,
     tier: 'Budget RX',
+    recommended: true,
     accent: '#f59e0b',
     short: 'Opłacalny zestaw do 1080p z mocniejszą kartą Radeon.',
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 5300,
+        price: 5450,
         summary: 'Alternatywa dla podstawowego RA z naciskiem na wyższą wydajność w klasycznej rasteryzacji.',
         specs: {
           gpu: 'RX 9060 XT',
+          vram: '8 GB',
           cpu: 'Ryzen 5 8400F',
           motherboard: 'B650',
           ram: '16 GB DDR5',
@@ -126,10 +129,11 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 6650,
+        price: 6900,
         summary: 'Większa wydajność i lepiej dobrane podzespoły dla osób, które oczekują czegoś więcej niż podstawowa konfiguracja.',
         specs: {
           gpu: 'RTX 5060 Ti',
+          vram: '8 GB',
           cpu: 'Ryzen 5 7500F',
           motherboard: 'B650',
           ram: '32 GB DDR5',
@@ -164,15 +168,17 @@ export const builds = [
     image: horusRxImage,
     imageSmall: horusRxImageSmall,
     tier: 'Gaming RX',
+    recommended: true,
     accent: '#ef4444',
     short: 'Gamingowy HORUS z kartą Radeon i mocnym zestawem do 1080p.',
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 6650,
+        price: 7000,
         summary: 'Większa wydajność i lepiej dobrane podzespoły w wariancie z kartą Radeon.',
         specs: {
           gpu: 'RX 9060 XT',
+          vram: '16 GB',
           cpu: 'Ryzen 5 7500F',
           motherboard: 'B650',
           ram: '32 GB DDR5',
@@ -216,6 +222,7 @@ export const builds = [
         summary: 'Prosta forma, mocne podzespoły i możliwie najlepszy stosunek ceny do FPS.',
         specs: {
           gpu: 'RTX 5070',
+          vram: '12 GB',
           cpu: 'Ryzen 7 7800X3D',
           motherboard: 'B850',
           ram: '32 GB DDR5',
@@ -243,6 +250,7 @@ export const builds = [
         summary: 'Wysoka wydajność w 1440p uzupełniona o dopracowaną obudowę, podświetlenie i wyposażenie klasy premium.',
         specs: {
           gpu: 'RTX 5070',
+          vram: '12 GB',
           cpu: 'Ryzen 7 7800X3D',
           motherboard: 'B850',
           ram: '32 GB DDR5 RGB',
@@ -277,6 +285,7 @@ export const builds = [
     image: setRxImage,
     imageSmall: setRxImageSmall,
     tier: 'Performance RX',
+    recommended: true,
     accent: '#ef4444',
     short: 'Wariant SETH z kartą Radeon. Mocna rasteryzacja i więcej pamięci VRAM.',
     variantOrder: ['pure', 'gaming'],
@@ -286,6 +295,7 @@ export const builds = [
         summary: 'Wariant z kartą Radeon. Więcej surowej wydajności i pamięci VRAM kosztem części funkcji NVIDIA.',
         specs: {
           gpu: 'RX 9070 XT',
+          vram: '16 GB',
           cpu: 'Ryzen 7 7800X3D',
           motherboard: 'B850',
           ram: '32 GB DDR5',
@@ -313,6 +323,7 @@ export const builds = [
         summary: 'Mocna rasteryzacja i większa ilość pamięci VRAM połączone z dopracowaną obudową i estetyką klasy premium.',
         specs: {
           gpu: 'RX 9070 XT',
+          vram: '16 GB',
           cpu: 'Ryzen 7 7800X3D',
           motherboard: 'B850',
           ram: '32 GB DDR5 RGB',
@@ -356,6 +367,7 @@ export const builds = [
         summary: 'RTX 5080 i Ryzen 7 9800X3D bez kosztownych dodatków, które nie wpływają na liczbę klatek.',
         specs: {
           gpu: 'RTX 5080',
+          vram: '16 GB',
           cpu: 'Ryzen 7 9800X3D',
           motherboard: 'B850',
           ram: '32 GB DDR5',
@@ -383,6 +395,7 @@ export const builds = [
         summary: 'Flagowa wydajność połączona z obudową typu showcase, podświetleniem i częściami wybranymi również pod wygląd.',
         specs: {
           gpu: 'RTX 5080',
+          vram: '16 GB',
           cpu: 'Ryzen 7 9800X3D',
           motherboard: 'X870E',
           ram: '32 GB DDR5 RGB',
@@ -415,6 +428,7 @@ export const builds = [
 
 export const specFields = [
   ['GPU', 'gpu'],
+  ['VRAM', 'vram'],
   ['CPU', 'cpu'],
   ['Płyta', 'motherboard'],
   ['RAM', 'ram'],
