@@ -1,0 +1,40 @@
+# Anubis PC
+
+> Anubis PC przygotowuje komputery gamingowe składane na zamówienie. Oferta obejmuje dobór kompatybilnych podzespołów, montaż, konfigurację, testy oraz odbiór w Elblągu lub wysyłkę na terenie Polski.
+
+Strona i oferta są dostępne w języku polskim. Anubis PC stawia na uczciwe porównanie zestawów, rzeczywiste różnice między konfiguracjami oraz możliwość dopasowania komputera do budżetu, monitora i używanych gier.
+
+## Oficjalna strona
+
+- [Anubis PC](https://anubispc.pl/): aktualna oferta komputerów, konfiguracje, ceny, zakres usług i dane kontaktowe.
+- [Polityka prywatności](https://anubispc.pl/polityka-prywatnosci.html): informacje dotyczące prywatności i Google Analytics.
+
+## Oferta
+
+- RA: opłacalne zestawy przeznaczone głównie do grania w rozdzielczości 1080p.
+- HORUS: mocniejsze konfiguracje z większym zapasem wydajności.
+- SETH: zestawy klasy 1440p dostępne w wariantach Pure Performance i Gaming.
+- ANUBIS: flagowe konfiguracje do grania w 1440p i 4K.
+- Dostępne są warianty z kartami graficznymi NVIDIA GeForce RTX oraz AMD Radeon RX.
+- Możliwa jest personalizacja podzespołów przed złożeniem zamówienia.
+
+## Realizacja i obsługa
+
+- Dobór podzespołów, montaż i uporządkowanie okablowania.
+- Konfiguracja BIOS-u, pamięci RAM, systemu i sterowników.
+- Testy stabilności oraz temperatur przed wydaniem komputera.
+- Odbiór osobisty w Elblągu lub zabezpieczona wysyłka na terenie Polski.
+- Wsparcie po zakupie.
+
+## Ważne informacje
+
+- Ceny i konkretne modele podzespołów mogą zmieniać się wraz z dostępnością oraz sytuacją rynkową.
+- Pełna konfiguracja, końcowa cena i termin realizacji są potwierdzane z klientem przed zamówieniem części.
+- Zdjęcia zestawów mają charakter poglądowy i zostały przygotowane cyfrowo.
+- Szacowana wydajność podawana na stronie ma charakter orientacyjny i zależy od gry, ustawień oraz aktualnych sterowników.
+
+## Kontakt
+
+- E-mail: kontakt@anubispc.pl
+- Telefon: +48 732 997 597
+- Lokalizacja: Elbląg, Polska
