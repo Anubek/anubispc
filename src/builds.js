@@ -129,7 +129,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 6900,
+        price: 7150,
         summary: 'Większa wydajność i lepiej dobrane podzespoły dla osób, które oczekują czegoś więcej niż podstawowa konfiguracja.',
         specs: {
           gpu: 'RTX 5060 Ti',
@@ -174,7 +174,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 7000,
+        price: 7250,
         summary: 'Większa wydajność i lepiej dobrane podzespoły w wariancie z kartą Radeon.',
         specs: {
           gpu: 'RX 9060 XT',
@@ -218,7 +218,7 @@ export const builds = [
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
-        price: 9350,
+        price: 9600,
         summary: 'Prosta forma, mocne podzespoły i możliwie najlepszy stosunek ceny do FPS.',
         specs: {
           gpu: 'RTX 5070',
@@ -291,7 +291,7 @@ export const builds = [
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
-        price: 9500,
+        price: 9750,
         summary: 'Wariant z kartą Radeon. Więcej surowej wydajności i pamięci VRAM kosztem części funkcji NVIDIA.',
         specs: {
           gpu: 'RX 9070 XT',
@@ -317,7 +317,7 @@ export const builds = [
         ],
       },
       gaming: {
-        price: 10100,
+        price: 10350,
         image: setRxGamingImage,
         imageSmall: setRxGamingImageSmall,
         summary: 'Mocna rasteryzacja i większa ilość pamięci VRAM połączone z dopracowaną obudową i estetyką klasy premium.',
