@@ -40,7 +40,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 5450,
+        price: 5750,
         summary: 'Rozsądnie dobrane podzespoły z naciskiem na opłacalność i możliwość późniejszej rozbudowy.',
         specs: {
           gpu: 'RTX 5060',
@@ -85,7 +85,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 5450,
+        price: 5750,
         summary: 'Alternatywa dla podstawowego RA z naciskiem na wyższą wydajność w klasycznej rasteryzacji.',
         specs: {
           gpu: 'RX 9060 XT',
@@ -129,7 +129,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 7150,
+        price: 7350,
         summary: 'Większa wydajność i lepiej dobrane podzespoły dla osób, które oczekują czegoś więcej niż podstawowa konfiguracja.',
         specs: {
           gpu: 'RTX 5060 Ti',
@@ -174,7 +174,7 @@ export const builds = [
     variantOrder: ['base'],
     variants: {
       base: {
-        price: 7250,
+        price: 7650,
         summary: 'Większa wydajność i lepiej dobrane podzespoły w wariancie z kartą Radeon.',
         specs: {
           gpu: 'RX 9060 XT',
@@ -218,7 +218,7 @@ export const builds = [
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
-        price: 9600,
+        price: 10400,
         summary: 'Prosta forma, mocne podzespoły i możliwie najlepszy stosunek ceny do FPS.',
         specs: {
           gpu: 'RTX 5070',
@@ -244,7 +244,7 @@ export const builds = [
         ],
       },
       gaming: {
-        price: 10300,
+        price: 10800,
         image: setGamingImage,
         imageSmall: setGamingImageSmall,
         summary: 'Wysoka wydajność w 1440p uzupełniona o dopracowaną obudowę, podświetlenie i wyposażenie klasy premium.',
@@ -291,7 +291,7 @@ export const builds = [
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
-        price: 9750,
+        price: 10150,
         summary: 'Wariant z kartą Radeon. Więcej surowej wydajności i pamięci VRAM kosztem części funkcji NVIDIA.',
         specs: {
           gpu: 'RX 9070 XT',
@@ -317,7 +317,7 @@ export const builds = [
         ],
       },
       gaming: {
-        price: 10350,
+        price: 10750,
         image: setRxGamingImage,
         imageSmall: setRxGamingImageSmall,
         summary: 'Mocna rasteryzacja i większa ilość pamięci VRAM połączone z dopracowaną obudową i estetyką klasy premium.',
@@ -363,7 +363,7 @@ export const builds = [
     variantOrder: ['pure', 'gaming'],
     variants: {
       pure: {
-        price: 14000,
+        price: 14800,
         summary: 'RTX 5080 i Ryzen 7 9800X3D bez kosztownych dodatków, które nie wpływają na liczbę klatek.',
         specs: {
           gpu: 'RTX 5080',
@@ -389,7 +389,7 @@ export const builds = [
         ],
       },
       gaming: {
-        price: 16500,
+        price: 17300,
         image: anubisGamingImage,
         imageSmall: anubisGamingImageSmall,
         summary: 'Flagowa wydajność połączona z obudową typu showcase, podświetleniem i częściami wybranymi również pod wygląd.',
