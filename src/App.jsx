@@ -318,6 +318,7 @@ export function App() {
         </div>
         <div className="site-footer__links">
           <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+          <a href="/pc-runners/privacy-policy/">Prywatność gry PC Runners</a>
           <button type="button" onClick={() => setPrivacySettingsOpen(true)}>
             Ustawienia prywatności
           </button>
